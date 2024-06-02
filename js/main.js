@@ -20,7 +20,14 @@ let songIndex = 0
 // Init
 function loadSong(song) {
   title.innerHTML = song
-  audio.src = `audio/${song}.mp3`
+  if (song === 'Ambient'){
+    audio.src = `https://cdn.pixabay.com/audio/2022/12/11/audio_e0b279ed8a.mp3`
+  } else if (song === 'Cream') {
+    audio.src = `https://cdn.pixabay.com/audio/2023/05/20/audio_4d116ec4eb.mp3`
+  }
+  else if (song === 'Desolate'){
+    audio.src = `https://cdn.pixabay.com/audio/2024/01/15/audio_a92500834a.mp3`
+  }
   cover.src = `img/cover${songIndex + 1}.webp`
 }
 
